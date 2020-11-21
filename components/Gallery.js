@@ -1,6 +1,7 @@
 import * as React from 'react'
 import Link from 'next/link'
 import style from './Gallery.module.css'
+import thumbStyle from './Thumbnail.module.css'
 
 import { motion } from 'framer-motion'
 import { images } from '../constants'
@@ -27,9 +28,9 @@ const imageVariants = {
 
 const Thumbnail = ({ id, i }) => (
   <>
-    <motion.div className="thumbnail" variants={thumbnailVariants}>
+    <motion.div className={thumbStyle.thumbnail} variants={thumbnailVariants}>
       <motion.div
-        className="frame"
+        className={thumbStyle.frame}
         whileHover="hover"
         variants={frameVariants}
         transition={transition}
@@ -44,27 +45,6 @@ const Thumbnail = ({ id, i }) => (
         </Link>
       </motion.div>
     </motion.div>
-    <style>
-      {`
-            .thumbnail {
-                flex: 1 0 33%;
-                margin: 10px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                cursor: pointer;
-            }
-
-            .frame {
-                overflow: hidden;
-            }
-
-            .thumbnail img {
-                width: 100%;
-                height: 100%;
-            }
-        `}
-    </style>
   </>
 )
 
