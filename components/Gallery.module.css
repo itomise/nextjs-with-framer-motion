@@ -1,0 +1,53 @@
+.test h1 {
+  font-size: 100px;
+  text-align: center;
+  position: fixed;
+  bottom: -100px;
+  z-index: 1;
+  color: #f9fbf8;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.test .gallery {
+  padding: 40px;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+}
+
+.test .thumbnails {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 600px) {
+  .test h1 {
+   font-size: 140px;
+   bottom: -130px;
+ }
+}
+
+@media screen and (min-width: 800px) {
+  .test h1 {
+   font-size: 180px;
+   bottom: -170px;
+ }
+}
+
+@media screen and (min-width: 1000px) {
+  .test h1 {
+   font-size: 220px;
+   bottom: -200px;
+ }
+}
+@media screen and (min-width: 1200px) {
+  .test h1 {
+   font-size: 280px;
+   bottom: -260px;
+ }
+}

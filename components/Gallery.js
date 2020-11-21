@@ -1,5 +1,6 @@
 import * as React from 'react'
 import Link from 'next/link'
+import style from './Gallery.module.css'
 
 import { motion } from 'framer-motion'
 import { images } from '../constants'
@@ -69,21 +70,23 @@ const Thumbnail = ({ id, i }) => (
 
 const Gallery = () => (
   <>
-    <h1>Motion</h1>
-    <div className="gallery">
-      <motion.div
-        className="thumbnails"
-        initial="initial"
-        animate="enter"
-        exit="exit"
-        variants={{ exit: { transition: { staggerChildren: 0.1 } } }}
-      >
-        {images.map((id, i) => (
-          <Thumbnail key={id} id={id} i={i} />
-        ))}
-      </motion.div>
+    <div className={style.test}>
+      <h1>Motion</h1>
+      <div className={style.gallery}>
+        <motion.div
+          className={style.thumbnails}
+          initial="initial"
+          animate="enter"
+          exit="exit"
+          variants={{ exit: { transition: { staggerChildren: 0.1 } } }}
+        >
+          {images.map((id, i) => (
+            <Thumbnail key={id} id={id} i={i} />
+          ))}
+        </motion.div>
+      </div>
     </div>
-    <style>
+    {/* <style>
       {`
         h1 {
             font-size: 100px;
@@ -139,7 +142,7 @@ const Gallery = () => (
            }
          }
         `}
-    </style>
+    </style> */}
   </>
 )
 
